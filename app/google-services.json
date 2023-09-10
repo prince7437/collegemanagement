@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "972058491298",
+    "firebase_url": "https://my-wctm-default-rtdb.firebaseio.com",
+    "project_id": "my-wctm",
+    "storage_bucket": "my-wctm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972058491298:android:8e463972ad9c0448a1dafb",
+        "android_client_info": {
+          "package_name": "com.example.admincollegeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972058491298-277cmd79pdvsuhuiicc173s1g20hr5i9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admincollegeapp",
+            "certificate_hash": "f24b0dacd1c6e8ea10ddac1d146b17b61e34cf8c"
+          }
+        },
+        {
+          "client_id": "972058491298-hkod9lldv4altd0u8sf0aghl91jmunpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0U3vSD3e0ges2-IFLZtueJt_mLF-iMCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972058491298-hkod9lldv4altd0u8sf0aghl91jmunpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972058491298:android:c15b50c0ca884c3ca1dafb",
+        "android_client_info": {
+          "package_name": "com.example.collegeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972058491298-hkod9lldv4altd0u8sf0aghl91jmunpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0U3vSD3e0ges2-IFLZtueJt_mLF-iMCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972058491298-hkod9lldv4altd0u8sf0aghl91jmunpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
