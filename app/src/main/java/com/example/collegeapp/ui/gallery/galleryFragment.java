@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.collegeapp.R;
 import com.google.firebase.database.DataSnapshot;
@@ -40,47 +41,70 @@ public class galleryFragment extends Fragment {
         otherRecycler=view.findViewById(R.id.otherRecycler);
 
 
-        reference= FirebaseDatabase.getInstance().getReference().child("gallery");
+        reference = FirebaseDatabase.getInstance().getReference().child("gallery");
 
          getConvoImage();
          getOtherImage();
-
-
-
-
-
 
         return view;
     }
 
     private void getOtherImage() {
-        reference.child("Other Events").addValueEventListener(new ValueEventListener() {
-            List<String> imageList=new ArrayList<>();
+
+
+        reference.child("otherevents").addValueEventListener(new ValueEventListener() {
+
+            List<String> imageList = new ArrayList<>();
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("refrence", dataSnapshot.toString());
-                for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
+                Log.d("refrence", reference.toString());
+
+                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
+
                     String data = (String) snapshot.getValue();
                     imageList.add(data);
                 }
-
-                Log.d("imageList","hellohjk");
-
-                adapter= new GalleryAdapter(getContext(),imageList);
+                Log.d("refrence", imageList.toString());
+                adapter = new GalleryAdapter(getContext(), imageList);
                 otherRecycler.setLayoutManager(new GridLayoutManager(getContext(),3));
                 otherRecycler.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(getContext(), "something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //
+//        reference.child("Other Events").child("-NeF5Fmk7F5Ff8clE93N").addValueEventListener(new ValueEventListener() {
+//            List<String> imageList=new ArrayList<>();
+//
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Log.d("refrence", dataSnapshot.toString());
+//                for (DataSnapshot snapshot:dataSnapshot.getChildren()) {
+//                    String data = (String) snapshot.getValue();
+//                    imageList.add(data);
+//                }
+//
+//                Log.d("imageList","hellohjk");
+//
+//                adapter= new GalleryAdapter(getContext(),imageList);
+//                otherRecycler.setLayoutManager(new GridLayoutManager(getContext(),3));
+//                otherRecycler.setAdapter(adapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
     }
 
     private void getConvoImage() {
-        reference.child("Convocation").addValueEventListener(new ValueEventListener() {
+        reference.child("convocation").addValueEventListener(new ValueEventListener() {
             List<String> imageList=new ArrayList<>();
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
